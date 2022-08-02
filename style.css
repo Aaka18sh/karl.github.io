@@ -23,7 +23,12 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+  background-image: url(/images/bg-2.jpg);
+}
+.bg-img img{
+  max-height: 100vh;
+  max-width: 100%;
+  z-index: -1;
 }
 .wrapper{
   width: 380px;
@@ -33,22 +38,57 @@ body{
   border-radius: 15px;
   background: var(--white);
   box-shadow: 0px 6px 15px var(--lightbshadow);
+  z-index: 111;
 }
 
 .wrapper i{
   cursor: pointer;
 }
-.top-bar, .progress-area .song-timer, 
+ .progress-area .song-timer, 
 .controls, .music-list .header, .music-list ul li{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.top-bar .serch-bar{
-    margin-top: 0%;
-    padding-top: 0%;
+
+.top-bar #searchbar{
+  margin-left: 3%;
+  padding:15px;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
 }
 
+.top-bar input[type=text] {
+   width: 100%;
+   -webkit-transition: width 0.15s ease-in-out;
+   transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+     change its width to 100% */
+.top-bar input[type=text]:focus {
+  min-width: 100%;
+}
+.top-bar #searchbar:before
+.top-bar .song{
+  background-color: red;
+  margin-top: 0;
+  display: none;
+}
+
+
+.top-bar #list{
+ font-size:  1.5em;
+ margin-left: 90px;
+ z-index: 1000;
+ /* display: none; */
+} 
+
+.top-bar .songs{
+display: list-item;    
+} 
+/* ------------------------------------------------------------------------- */
 
 .top-bar i{
   font-size: 30px;
@@ -59,7 +99,8 @@ body{
 }
 .top-bar span{
   font-size: 18px;
-  margin-left: -3px;
+  margin-left: 50px;
+  margin-right: 80px;
   color: var(--lightblack);
 }
 .img-area{
