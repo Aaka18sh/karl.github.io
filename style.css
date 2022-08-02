@@ -36,7 +36,7 @@ body{
   overflow: hidden;
   position: relative;
   border-radius: 15px;
-  background: var(--white);
+  background: rgba(56, 55, 55, 0.7);
   box-shadow: 0px 6px 15px var(--lightbshadow);
   z-index: 111;
 }
@@ -97,11 +97,19 @@ display: list-item;
 .top-bar i:first-child{
   margin-left: -7px;
 }
+
 .top-bar span{
   font-size: 18px;
-  margin-left: 50px;
-  margin-right: 80px;
+  margin-left: 1px;
+  margin-top: -3px;
   color: var(--lightblack);
+}
+span .span{
+    font-size: 18px;
+    margin-left: 50px;
+    margin-right: 80px;
+    color: var(--lightblack);
+  
 }
 .img-area{
   width: 100%;
@@ -135,7 +143,7 @@ display: list-item;
   height: 6px;
   width: 100%;
   border-radius: 50px;
-  background: #f0f0f0;
+  background: rgba(56, 55, 55, 0.7);
   cursor: pointer;
 }
 .progress-area .progress-bar{
@@ -225,7 +233,7 @@ display: list-item;
 
 .music-list{
   position: absolute;
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.9);
   width: 100%;
   left: 0;
   bottom: -55%;
